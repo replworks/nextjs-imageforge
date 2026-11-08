@@ -15,10 +15,16 @@ type TurbopackRules = NonNullable<
   NonNullable<NextConfig["turbopack"]>["rules"]
 >;
 
-export function withImageForge(
-  nextConfig: NextConfig,
+export type ImageForgeConfig<T extends NextConfig> = T & {
+  env: NonNullable<NextConfig["env"]>;
+  turbopack: NonNullable<NextConfig["turbopack"]>;
+  webpack: WebpackFunction;
+};
+
+export function withImageForge<T extends NextConfig>(
+  nextConfig: T,
   options: ImageForgeOptions = {},
-): NextConfig {
+): ImageForgeConfig<T> {
   const settings = resolveSettings(options);
   const basePath = nextConfig.basePath ?? "";
   const env: Record<string, string | undefined> = {
