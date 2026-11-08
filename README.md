@@ -1,3 +1,5 @@
+@replworks/nextjs-imageforge is a client for the Image Forge service
+
 # Next.js Imageforge
 
 [![CI](https://github.com/replworks/nextjs-imageforge/actions/workflows/ci.yml/badge.svg)](https://github.com/replworks/nextjs-imageforge/actions/workflows/ci.yml)
