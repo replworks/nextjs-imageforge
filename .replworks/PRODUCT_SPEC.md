@@ -94,6 +94,8 @@ Rules:
 ## Errors and non-goals
 
 - A Forge URL request with an unset service raises an error mentioning `service`. In Application Source this fails the build or the dev compilation.
+- An Application Source file that contains the prefix but cannot be parsed fails the build or the dev compilation; it is not passed through unchanged.
+- Without `withImageForge()`, `imageForge()` uses the default `baseUrl` and no `basePath`.
 - The product does not provide an Image component.
 - The product does not provide a `next/image` loader.
 - The product does not read tokens from expressions, template literals, or helper calls such as `cn(...)`.

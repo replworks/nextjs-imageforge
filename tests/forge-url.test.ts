@@ -24,6 +24,14 @@ describe("imageForge Forge URL", () => {
     );
   });
 
+  it("uses the default baseUrl when the config is not wrapped", () => {
+    embed({ IMAGEFORGE_SERVICE: "svc" });
+
+    expect(imageForge("/cat.jpg", { w: 480 })).toBe(
+      "https://img.repl.net/svc/cat.jpg?w=480",
+    );
+  });
+
   it("includes basePath in the Forge URL path", () => {
     embed({
       IMAGEFORGE_BASE_URL: "https://img.repl.net",

@@ -63,8 +63,9 @@ C7 returns `options` and `consumed`. It performs no URL work and does not depend
 
 ## 6. Settings ownership
 
-- C5 is the only component that reads environment values.
+- C5 is the only component that reads the Developer's environment values.
 - C6 resolves settings once per host config load and hands the same values to the host's build for C4 and to C8.
+- C4 reads only the settings that the host's build embedded from C6; it never reads the Developer's environment values. When nothing was embedded, C4 supplies the C5 defaults.
 - C1, C2, and C3 receive settings from C4 or from C8 and do not read environment values or host configuration themselves.
 
 ## 7. Invariants

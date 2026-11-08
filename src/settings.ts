@@ -1,3 +1,7 @@
+import { DEFAULT_BASE_URL, DEFAULT_PREFIX } from "./defaults.js";
+
+export { DEFAULT_BASE_URL, DEFAULT_PREFIX } from "./defaults.js";
+
 export interface ImageForgeOptions {
   baseUrl?: string;
   service?: string;
@@ -9,9 +13,6 @@ export interface ImageForgeSettings {
   service?: string;
   prefix: string;
 }
-
-export const DEFAULT_BASE_URL = "https://img.repl.net";
-export const DEFAULT_PREFIX = "if-";
 
 export function resolveSettings(
   options: ImageForgeOptions = {},

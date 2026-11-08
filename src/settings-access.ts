@@ -1,3 +1,5 @@
+import { DEFAULT_BASE_URL } from "./defaults.js";
+
 export interface UrlSettings {
   baseUrl: string;
   service?: string;
@@ -6,7 +8,7 @@ export interface UrlSettings {
 
 export function readSettings(): UrlSettings {
   return {
-    baseUrl: process.env.IMAGEFORGE_BASE_URL ?? "",
+    baseUrl: process.env.IMAGEFORGE_BASE_URL ?? DEFAULT_BASE_URL,
     service: process.env.IMAGEFORGE_SERVICE,
     basePath: process.env.IMAGEFORGE_BASE_PATH ?? "",
   };
