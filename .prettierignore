@@ -1,0 +1,7 @@
+AGENTS.md
+.replworks/
+probes/
+node_modules/
+dist/
+.next/
+CHANGELOG.md

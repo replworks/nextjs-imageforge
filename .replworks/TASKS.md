@@ -4,7 +4,7 @@ Execution checklist in dependency order (AGENTS.md).
 AC- IDs refer to PRODUCT_SPEC.md. C- IDs and section numbers refer to ARCHITECTURE.md.
 "Unit tests passing" means the unit tests written for that task pass.
 
-- [ ] T-001 Project foundation
+- [x] T-001 Project foundation
   - Satisfies: TECH_STACK.md
   - External boundary: no
   - Acceptance criteria:
