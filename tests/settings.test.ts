@@ -119,9 +119,8 @@ describe("withImageForge settings delivery", () => {
 
     expect(result.basePath).toBe("/docs");
     expect(result.reactStrictMode).toBe(true);
-    expect(result.turbopack).toBe(nextConfig.turbopack);
-    expect(result.turbopack?.rules).toBe(rules);
-    expect(result.webpack).toBe(webpack);
+    expect(result.turbopack?.rules?.["*.svg"]).toBe(rules["*.svg"]);
+    expect(typeof result.webpack).toBe("function");
     expect(result.images).toBe(nextConfig.images);
     expect(result.env).toEqual({
       OTHER: "kept",

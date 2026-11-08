@@ -61,7 +61,7 @@ AC- IDs refer to PRODUCT_SPEC.md. C- IDs and section numbers refer to ARCHITECTU
     - An unset service with an eligible `src` raises the service error.
     - Unit tests passing.
 
-- [ ] T-007 Developer sizes images through `className` in a Next.js app
+- [x] T-007 Developer sizes images through `className` in a Next.js app
   - Satisfies: PRODUCT_SPEC.md JSX Class DSL; Explicit API behavior; AC-008
   - External boundary: no
   - Acceptance criteria:
