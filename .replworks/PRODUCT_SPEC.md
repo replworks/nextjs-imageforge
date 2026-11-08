@@ -126,4 +126,3 @@ Rules:
 - AC-018: The DSL produces the same output in Server Components and Client Components, in `next dev` and `next build`.
 - AC-019: A custom `prefix` replaces `if-` for every token.
 - AC-020: Files under `node_modules` are not transformed.
-- AC-021: The first line of the README states that the package is a client for the Image Forge service.
