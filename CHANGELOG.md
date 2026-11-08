@@ -1,5 +1,19 @@
 # Release Notes
 
+## v0.1.1 - 2026-11-08
+
+### What's Changed
+
+* docs(README): remove redundant description line by [@cable8mm](https://github.com/cable8mm) in https://github.com/replworks/nextjs-imageforge/pull/10
+* test(readme): remove readme test by [@cable8mm](https://github.com/cable8mm) in https://github.com/replworks/nextjs-imageforge/pull/11
+* fix: keep the given config type in withImageForge by [@replworks-bot](https://github.com/replworks-bot) in https://github.com/replworks/nextjs-imageforge/pull/12
+
+### New Contributors
+
+* [@cable8mm](https://github.com/cable8mm) made their first contribution in https://github.com/replworks/nextjs-imageforge/pull/10
+
+**Full Changelog**: https://github.com/replworks/nextjs-imageforge/compare/v0.1.0...v0.1.1
+
 ## v0.1.0 - 2026-11-08
 
 ### What's Changed
