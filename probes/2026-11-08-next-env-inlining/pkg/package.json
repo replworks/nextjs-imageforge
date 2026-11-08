@@ -1,0 +1,2 @@
+{ "name": "probe-pkg", "version": "0.0.0", "type": "module",
+  "exports": { ".": "./index.js", "./config": "./config.js" } }

@@ -1,0 +1,1 @@
+{"name":"probe-app","private":true,"type":"module","dependencies":{"next":"^16.4.5","probe-pkg":"file:../pkg/probe-pkg-0.0.0.tgz","react":"^19.3.1","react-dom":"^19.3.1"}}
