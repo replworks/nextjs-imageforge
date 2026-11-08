@@ -32,7 +32,7 @@ AC- IDs refer to PRODUCT_SPEC.md. C- IDs and section numbers refer to ARCHITECTU
     - With `w` absent, `h`, `fit`, `q`, and `f` supplied together still return the Source URL.
     - Unit tests passing.
 
-- [ ] T-004 Developer obtains a Forge URL from `imageForge()`
+- [x] T-004 Developer obtains a Forge URL from `imageForge()`
   - Satisfies: PRODUCT_SPEC.md Explicit API behavior; Errors and non-goals
   - External boundary: no
   - Acceptance criteria:
