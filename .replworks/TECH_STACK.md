@@ -38,7 +38,8 @@
 - The `.` entry MUST NOT import `next`, `@babel/parser`, or Node.js built-in modules.
 - `next` imports in `src/` MUST be type-only.
 - The JSX Class DSL MUST be one webpack-loader-compatible source transform, registered by `withImageForge()` for both bundlers (observation `2026-11-08-jsx-class-dsl`):
-  - Turbopack: an entry in `turbopack.rules` for `*.{js,jsx,tsx}` with `condition: { not: "foreign" }`, the loader as an absolute path, and JSON-serializable loader options. The rule MUST NOT set `as`.
+  - Turbopack: an entry in `turbopack.rules` for `*.{js,jsx,tsx}` with `condition: { all: [{ not: "foreign" }, { not: { path: /(^|[\\/])node_modules[\\/]/ } }] }`, the loader as an absolute path, and JSON-serializable loader options. The rule MUST NOT set `as`. `{ not: "foreign" }` alone does not exclude packages listed in `transpilePackages` (observation `2026-11-08-turbopack-foreign-transpile`).
+  - When `turbopack.rules["*.{js,jsx,tsx}"]` already exists, its value (a single rule object or an array) MUST be kept, and the package rule MUST be appended to it as an array; Turbopack applies every item (observation `2026-11-08-turbopack-rule-array`).
   - webpack: a rule in the `webpack` config function with `test` for `.js`, `.jsx`, `.tsx`, `exclude: /node_modules/`, and `enforce: "pre"`. An existing `webpack` function MUST still be called.
 - The loader module MUST be CommonJS (`.cjs`). It MAY load the package's ESM modules with dynamic `import()`.
 - The loader MUST parse with `@babel/parser` using the `jsx` plugin, plus `typescript` for `.tsx`, and MUST rewrite the source by splicing attribute ranges, leaving all other source text unchanged.

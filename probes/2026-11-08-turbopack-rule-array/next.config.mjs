@@ -1,0 +1,12 @@
+import { fileURLToPath } from "node:url";
+import { withImageForge } from "@replworks/nextjs-imageforge/config";
+const devLoader = fileURLToPath(new URL("./dev-loader.cjs", import.meta.url));
+const config = withImageForge({ basePath: "/docs", transpilePackages: ["fixture-dep"] });
+const ours = config.turbopack.rules["*.{js,jsx,tsx}"];
+ours.condition = { all: [{ not: "foreign" }, { not: { path: /(^|[\\/])node_modules[\\/]/ } }] };
+const mode = process.env.PROBE_MODE;
+const developer = { condition: { not: "foreign" }, loaders: [{ loader: devLoader }] };
+if (mode === "array") config.turbopack.rules["*.{js,jsx,tsx}"] = [developer, ours];
+if (mode === "array-rev") config.turbopack.rules["*.{js,jsx,tsx}"] = [ours, developer];
+if (mode === "shorthand") config.turbopack.rules["*.{js,jsx,tsx}"] = [{ loader: devLoader }, ours];
+export default config;
