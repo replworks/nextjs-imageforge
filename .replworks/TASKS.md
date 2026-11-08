@@ -41,7 +41,7 @@ AC- IDs refer to PRODUCT_SPEC.md. C- IDs and section numbers refer to ARCHITECTU
     - An option value containing URL-reserved characters appears in the query exactly as supplied.
     - Unit tests passing.
 
-- [ ] T-005 DSL Parser maps tokens to options
+- [x] T-005 DSL Parser maps tokens to options
   - Satisfies: PRODUCT_SPEC.md JSX Class DSL (token table and rules)
   - External boundary: no
   - Acceptance criteria:
