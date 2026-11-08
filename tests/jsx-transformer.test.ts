@@ -240,3 +240,11 @@ describe("JSX transformer service error", () => {
     ).toBe(`<img src="a.png" />`);
   });
 });
+
+describe("JSX transformer parse failures", () => {
+  it("fails instead of passing through a file with the prefix that cannot be parsed", () => {
+    expect(() =>
+      transform(`const x = <img src="/a.png" className="if-w-1" ;`),
+    ).toThrow();
+  });
+});
