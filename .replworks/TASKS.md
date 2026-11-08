@@ -70,7 +70,7 @@ AC- IDs refer to PRODUCT_SPEC.md. C- IDs and section numbers refer to ARCHITECTU
     - AC-018 passes for `next dev` with Turbopack.
     - Unit tests passing.
 
-- [ ] T-008 README first-line slot states the package is a client for the Image Forge service
+- [x] T-008 README first-line slot states the package is a client for the Image Forge service
   - Satisfies: PRODUCT_SPEC.md AC-021
   - External boundary: no
   - Acceptance criteria:
