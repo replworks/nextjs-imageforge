@@ -13,7 +13,7 @@ AC- IDs refer to PRODUCT_SPEC.md. C- IDs and section numbers refer to ARCHITECTU
     - The package exposes the `.` and `./config` entries; `withImageForge()` can wrap a Next.js config without error.
     - CI runs on the Node matrix defined in TECH_STACK.md.
 
-- [ ] T-002 Developer configures the product through `withImageForge()` options and environment variables
+- [x] T-002 Developer configures the product through `withImageForge()` options and environment variables
   - Satisfies: PRODUCT_SPEC.md Inputs and configuration
   - External boundary: no
   - Acceptance criteria:
