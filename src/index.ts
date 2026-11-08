@@ -1,16 +1,14 @@
-export interface ImageForgeUrlOptions {
-  w?: number | string | null;
-  h?: number | string | null;
-  fit?: string | null;
-  q?: number | string | null;
-  f?: string | null;
-}
+import { readSettings } from "./settings-access.js";
+import {
+  imageForgeWithSettings,
+  type ImageForgeUrlOptions,
+} from "./url-api.js";
+
+export type { ImageForgeUrlOptions } from "./url-api.js";
 
 export function imageForge(
   path: string | null | undefined,
   options: ImageForgeUrlOptions = {},
 ): string | null {
-  void path;
-  void options;
-  return null;
+  return imageForgeWithSettings(path, options, readSettings());
 }

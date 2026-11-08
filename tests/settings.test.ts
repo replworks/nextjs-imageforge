@@ -134,7 +134,7 @@ describe("withImageForge settings delivery", () => {
 });
 
 describe("environment access", () => {
-  it("reads environment values only in the settings definition module", async () => {
+  it("reads process.env only in the settings definition and settings access modules", async () => {
     const sourceDirectory = new URL("../src/", import.meta.url);
     const files = (await readdir(sourceDirectory)).filter(
       (file) => file.endsWith(".ts") && !file.endsWith(".d.ts"),
@@ -148,6 +148,20 @@ describe("environment access", () => {
       }
     }
 
-    expect(readers).toEqual(["settings.ts"]);
+    expect(readers.sort()).toEqual(["settings-access.ts", "settings.ts"]);
+  });
+
+  it("reads embedded settings in the . entry only as literal process.env expressions", async () => {
+    const source = await readFile(
+      new URL("../src/settings-access.ts", import.meta.url),
+      "utf8",
+    );
+    const expressions = source.match(/process\.env(?:\.\w+)?/g);
+
+    expect(expressions).toEqual([
+      "process.env.IMAGEFORGE_BASE_URL",
+      "process.env.IMAGEFORGE_SERVICE",
+      "process.env.IMAGEFORGE_BASE_PATH",
+    ]);
   });
 });

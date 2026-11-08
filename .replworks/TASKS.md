@@ -22,7 +22,7 @@ AC- IDs refer to PRODUCT_SPEC.md. C- IDs and section numbers refer to ARCHITECTU
     - Environment values are read only by C5 (ARCHITECTURE.md Section 6).
     - Unit tests passing.
 
-- [ ] T-003 Developer obtains a Source URL, or null, from `imageForge()`
+- [x] T-003 Developer obtains a Source URL, or null, from `imageForge()`
   - Satisfies: PRODUCT_SPEC.md Explicit API behavior
   - External boundary: no
   - Acceptance criteria:
