@@ -70,9 +70,8 @@ AC- IDs refer to PRODUCT_SPEC.md. C- IDs and section numbers refer to ARCHITECTU
     - AC-018 passes for `next dev` with Turbopack.
     - Unit tests passing.
 
-- [x] T-008 README first-line slot states the package is a client for the Image Forge service
-  - Satisfies: PRODUCT_SPEC.md AC-021
+- [x] T-008 Withdrawn: README first-line requirement
+  - Satisfies: none (AC-021 removed from PRODUCT_SPEC.md by owner decision, 2026-11-08)
   - External boundary: no
   - Acceptance criteria:
-    - AC-021 passes.
-    - The wording beyond what AC-021 checks is not part of this task (human-owned, AGENTS.md HUMAN_OWNED_CHANGES).
+    - None. README wording is human-owned (AGENTS.md HUMAN_OWNED_CHANGES).
