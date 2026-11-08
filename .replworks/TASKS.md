@@ -50,7 +50,7 @@ AC- IDs refer to PRODUCT_SPEC.md. C- IDs and section numbers refer to ARCHITECTU
     - The parser returns `options` and `consumed` and has no syntax-tree dependency (ARCHITECTURE.md Section 5).
     - Unit tests passing.
 
-- [ ] T-006 JSX Transformer rewrites eligible elements in a source file
+- [x] T-006 JSX Transformer rewrites eligible elements in a source file
   - Satisfies: PRODUCT_SPEC.md JSX Class DSL; Errors and non-goals
   - External boundary: no
   - Acceptance criteria:
